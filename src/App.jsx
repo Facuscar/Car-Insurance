@@ -1,8 +1,11 @@
+import { QuoteProvider } from "./context/QuoteProvider"
 import InsuranceApp from "./components/InsuranceApp"
 
 function App() {
   return (
-    <InsuranceApp></InsuranceApp>
+    <QuoteProvider>
+      <InsuranceApp />
+    </QuoteProvider>
   )
 }
 
