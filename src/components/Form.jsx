@@ -4,7 +4,7 @@ import useQuoter from "../hooks/useQuoter";
 
 const Form = () => {
 
-    const {} = useQuoter();
+    const { handleChangeData, data } = useQuoter();
 
     return (
         <form action="">
@@ -12,7 +12,7 @@ const Form = () => {
                 <label htmlFor="" className="block mb-3 font-bold text-gray-400 uppercase">
                     Brand
                 </label>
-                <select name="brand" id="" className="w-full p-3 bg-white border border-gray-200">
+                <select name="brand" id="" className="w-full p-3 bg-white border border-gray-200" onChange={ e => handleChangeData(e)} value={data.brand} >
                     <option value="">-- Select a brand --</option>
                     {BRANDS.map(brand => (
                         <option value={brand.id} key={brand.id}>{brand.name}</option>
@@ -23,7 +23,7 @@ const Form = () => {
                 <label htmlFor="" className="block mb-3 font-bold text-gray-400 uppercase">
                     Year
                 </label>
-                <select name="brand" id="" className="w-full p-3 bg-white border border-gray-200">
+                <select name="year" id="" className="w-full p-3 bg-white border border-gray-200"  onChange={ e => handleChangeData(e)} value={data.year} >
                     <option value="">-- Select a year --</option>
                     {YEARS.map(year => (
                         <option value={year} key={year}>{year}</option>
@@ -40,7 +40,7 @@ const Form = () => {
                             <label htmlFor="">
                                 {plan.name}
                             </label>
-                            <input type="radio" name="plan" value={plan.id} />
+                            <input type="radio" name="plan" value={plan.id}  onChange={ e => handleChangeData(e)} />
                         </Fragment>
                     ))}
                 </div>
