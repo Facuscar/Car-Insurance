@@ -1,10 +1,10 @@
-import { Fragment, useContext } from "react";
+import { Fragment } from "react";
 import { BRANDS, YEARS, PLANS } from "../constants";
-import QuoteContext from "../context/QuoteProvider";
+import useQuoter from "../hooks/useQuoter";
 
 const Form = () => {
 
-    const {} = useContext(QuoteContext);
+    const {} = useQuoter();
 
     return (
         <form action="">
