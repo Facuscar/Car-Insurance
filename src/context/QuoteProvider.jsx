@@ -10,9 +10,7 @@ export const QuoteProvider = ({ children }) => {
         year: '',
         plan: '',
     });
-
     const [error, setError] = useState('');
-
     const [result, setResult] = useState(0);
 
     const handleChangeData = (e) => {

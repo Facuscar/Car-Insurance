@@ -4,6 +4,7 @@ import useQuoter from "../hooks/useQuoter";
 const InsuranceApp = () => {
 
     const { result } = useQuoter();
+    console.log(result);
 
     return (
         <>
@@ -13,7 +14,7 @@ const InsuranceApp = () => {
 
             <main className="bg-white md:w-2/3 lg:w-2/4 mx-auto shadow rounded-lg p-10">
                 <Form></Form>
-                {result}
+                {result !==0  && <p>{result}</p>}
             </main>
         </>
     );
