@@ -1,7 +1,7 @@
 export const BRANDS = [
-    {id: 1, name: 'Lamborghini'},
+    {id: 3, name: 'Lamborghini'},
     {id: 2, name: 'Audi'},
-    {id: 3, name: 'Fiat'},
+    {id: 1, name: 'Fiat'},
 ]
 
 export const YEARS = Array.from( new Array(20), (value, index) => new Date().getFullYear() - index);
