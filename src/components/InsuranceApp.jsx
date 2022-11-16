@@ -1,10 +1,7 @@
 import Form from "./Form";
-import useQuoter from "../hooks/useQuoter";
+import Result from "./Result";
 
 const InsuranceApp = () => {
-
-    const { result } = useQuoter();
-    console.log(result);
 
     return (
         <>
@@ -13,8 +10,8 @@ const InsuranceApp = () => {
             </header>
 
             <main className="bg-white md:w-2/3 lg:w-2/4 mx-auto shadow rounded-lg p-10">
-                <Form></Form>
-                {result !==0  && <p>{result}</p>}
+                <Form />
+                <Result />
             </main>
         </>
     );
