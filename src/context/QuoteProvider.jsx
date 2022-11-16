@@ -32,7 +32,7 @@ export const QuoteProvider = ({ children }) => {
         const brandResult =  differenceResult * calculateBrand(brand);
         
         const planResult = Math.floor(brandResult * calculatePlan(plan));
-        setResult(planResult);
+        setResult(formatTotal(planResult));
     }
 
     return (
@@ -42,6 +42,7 @@ export const QuoteProvider = ({ children }) => {
             setError,
             error,
             quoteInsurance,
+            result,
         }}>
             {children}
         </QuoteContext.Provider>
