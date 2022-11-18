@@ -1,10 +1,11 @@
-import { useMemo } from "react";
+import { useMemo, useRef } from "react";
 import useQuoter from "../hooks/useQuoter"
 import { BRANDS, PLANS } from "../constants";
 
 const Result = () => {
     const { result, data } = useQuoter();
     const { brand, plan, year } = data;
+    const yearRef = useRef(year);
 
     if (!result) return null;
 
@@ -19,7 +20,7 @@ const Result = () => {
             <h2 className="text-gray-500 font-black text-3xl">Summary</h2>
             <p><span className="font-bold">Brand: </span>{brandName}</p>
             <p><span className="font-bold">Plan: </span>{planName}</p>
-            <p><span className="font-bold">Car year: </span>{year}</p>
+            <p><span className="font-bold">Car year: </span>{yearRef.current}</p>
             <p className="text-2xl"><span className="font-bold">Total: </span>{result}</p>
             
         </div>
